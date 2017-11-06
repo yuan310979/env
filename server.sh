@@ -32,3 +32,6 @@ rm ~/.tmux.conf
 ln -s $PWD/.tmux.conf ~/.tmux.conf
 tmux source ~/.tmux.conf
 
+# load terminal settings
+sudo apt-get install dconf-tools
+dconf load /org/gnome/terminal/legacy/profiles:/:b1dcc9dd-5262-4d8d-a863-c897e6d979b9/ < profile.dconf
