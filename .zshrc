@@ -1,3 +1,4 @@
+export TERM="xterm-256color"
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
 
@@ -6,7 +7,7 @@ export ZSH=$HOME/.oh-my-zsh
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
 # ZSH_THEME="xiong-chiamiov-plus"
-ZSH_THEME="rkj-repos"
+ZSH_THEME="powerlevel9k/powerlevel9k"
 
 
 # Uncomment the following line to use case-sensitive completion.

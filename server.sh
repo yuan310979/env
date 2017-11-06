@@ -12,7 +12,8 @@ ln -s $PWD/.ssh.conf ~/.ssh/config
 chsh -s /bin/zsh $USER
 git clone https://github.com/robbyrussell/oh-my-zsh.git
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-cp rkj-repos.zsh-theme ~/.oh-my-zsh/themes/
+git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/themes/powerlevel9k
+cp Powerline.ttf /usr/local/share/fonts/
 cp oh-my-zsh/oh-my-zsh.sh ../.oh-my-zsh/
 rm ~/.zshrc
 ln -s $PWD/.zshrc ~/.zshrc
