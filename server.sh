@@ -1,6 +1,6 @@
 #/bin/sh
 
-sudo apt-get install -y zsh vim tmux
+sudo apt-get install -y zsh vim tmux curl
 # git
 rm ~/.gitconfig
 ln -s $PWD/.gitconfig ~/.gitconfig
@@ -10,8 +10,10 @@ ln -s $PWD/.ssh.conf ~/.ssh/config
 
 # zsh
 chsh -s /bin/zsh $USER
+git clone https://github.com/robbyrussell/oh-my-zsh.git
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 cp rkj-repos.zsh-theme ~/.oh-my-zsh/themes/
+cp oh-my-zsh/oh-my-zsh.sh ../.oh-my-zsh/
 rm ~/.zshrc
 ln -s $PWD/.zshrc ~/.zshrc
 source ~/.zshrc
