@@ -17,6 +17,10 @@ curl -fsSL $URL/.ssh.conf > $DIR/.ssh.conf
 ln -s $DIR/.ssh.conf $HOME/.ssh/config
 sudo chmod 644 $HOME/.ssh/config
 
+# bash
+rm $HOME/.bashrc
+ln -s $DIR/.bashrc $HOME/.bashrc
+
 # zsh
 sudo chsh -s /bin/zsh $USER
 git clone https://github.com/robbyrussell/oh-my-zsh.git
