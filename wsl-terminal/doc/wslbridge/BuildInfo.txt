@@ -1,0 +1,24 @@
+File:             C:\cygwin64\bin\cygwin1.dll
+InternalName:     cygwin1.dll
+OriginalFilename: cygwin1.dll
+FileVersion:      2.8.0
+FileDescription:  Cygwin POSIX Emulation DLL
+Product:          Cygwin
+ProductVersion:   2.8.0
+Debug:            False
+Patched:          False
+PreRelease:       False
+PrivateBuild:     False
+SpecialBuild:     False
+Language:         English (United States)
+
+g++ (GCC) 5.4.0
+Copyright (C) 2015 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+g++ (Ubuntu 4.8.4-2ubuntu1~14.04.3) 4.8.4
+Copyright (C) 2013 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
