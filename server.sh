@@ -52,3 +52,8 @@ cp -R ./wsl-terminal/ /mnt/d/
 
 # java 
 sudo apt-get install default-jdk
+
+# anaconda
+curl -fsSL https://repo.anaconda.com/archive/Anaconda3-5.2.0-Linux-x86_64.sh > anaconda.sh
+bash ./anaconda.sh
+rm ./anaconda.sh
