@@ -5,7 +5,7 @@ URL="https://raw.githubusercontent.com/yuan310979/env/master/config"
 mkdir -p $DIR
 
 sudo apt-get update
-sudo apt-get install -y zsh vim tmux screen curl git htop p7zip-full
+sudo apt-get install -y zsh vim tmux screen curl git htop p7zip-full cmake
 
 # git
 rm -f $HOME/.gitconfig
@@ -52,8 +52,3 @@ cp -R ./wsl-terminal/ /mnt/d/
 
 # java 
 sudo apt-get install default-jdk
-
-# anaconda
-curl -fsSL https://repo.anaconda.com/archive/Anaconda3-5.2.0-Linux-x86_64.sh > anaconda.sh
-bash ./anaconda.sh
-rm ./anaconda.sh
