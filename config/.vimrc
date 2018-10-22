@@ -30,15 +30,16 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
+let g:lightline = {'colorscheme': 'wombat'}
 
 set fileencodings=utf8,big5,gbk,latin1
 map <C-u> :set fileencoding=utf8<CR>
 map <C-g> :set fileencoding=big5<CR>
 
-set cursorline
-hi CursorLine cterm=bold
-" hi CursorLine ctermbg=8
-hi Visual ctermbg=0
+"set cursorline
+"hi CursorLine cterm=bold
+"hi CursorLine ctermbg=8
+"hi Visual ctermbg=0
 
 set laststatus=2
 set statusline=%5*%{hostname()}:%<%{CurDir()}/
