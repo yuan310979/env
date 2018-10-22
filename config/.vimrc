@@ -117,6 +117,7 @@ filetype plugin indent on        " required
 :set switchbuf+=newtab
 
 map e :Tex<CR>
+map <F8> :set hls!<BAR>set hls?<CR>
 map <F11> gT
 map <F12> gt
 map <F2> :set nu!<CR>
