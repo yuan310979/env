@@ -1,6 +1,7 @@
 export TERM="xterm-256color"
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
+#export FZF_DEFAULT_COMMAND='ag --hidden --ignore .git -g ""'
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -109,3 +110,5 @@ export PATH="/home/yuan310979/anaconda3/bin:$PATH"
 
 # added by Anaconda3 installer
 export PATH="/home/yuan310979/anaconda3/bin:$PATH"
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

@@ -62,11 +62,6 @@ filetype off                                    " required
 
 let g:ag_working_path_mode="r"
 
-let g:ctrlp_custom_ignore = {
-    \ 'dir':    '\v[\/]\.(git|hg|svn)$',
-    \ 'file': '\v\.(exe|so|dll)$',
-    \ }
-let g:ctrlp_working_path_mode = 0
 let g:netrw_liststyle=3
 let g:ycm_global_ycm_extra_conf = "~/.vim/.ycm_extra_conf.py"
 let g:ycm_key_list_select_completion=[]
@@ -89,7 +84,6 @@ call vundle#begin()
     Plugin 'scrooloose/nerdtree'
     " plugin from http://vim-scripts.org/vim/scripts.html
     Plugin 'L9'
-    Plugin 'https://github.com/ctrlpvim/ctrlp.vim.git'
     Plugin 'https://github.com/honza/vim-snippets'
     Plugin 'https://github.com/othree/vim-autocomplpop'
     Plugin 'https://github.com/marcweber/vim-addon-mw-utils'
@@ -100,6 +94,9 @@ call vundle#begin()
     Plugin 'https://github.com/rking/ag.vim'
     " Plugin 'https://github.com/vim-syntastic/syntastic.git'
     Plugin 'http://github.com/mattn/emmet-vim/'
+    
+    set rtp+=~/.fzf
+    Plugin 'junegunn/fzf.vim'
 
     " All of your Plugins must be added before the following line
 call vundle#end()                        " required
@@ -127,6 +124,7 @@ map <F2> :set nu!<CR>
 map <F3> :w<CR>:EXE 
 map <F4> :execute "vimgrep /" .expand("<cword>") . "/j **" <Bar> cw<CR>
 map <C-o> :NERDTreeToggle<CR> 
+map ; :Files<CR> 
 command -nargs=* EXE execute CP_R() . <q-args>
 " command -nargs=* AG vimgrep <q-args> * | copen
 
