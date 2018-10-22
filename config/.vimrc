@@ -85,6 +85,7 @@ call vundle#begin()
     " Keep Plugin commands between vundle#begin/end.
     " plugin on GitHub repo
     Plugin 'tpope/vim-fugitive'
+    Plugin 'itchyny/lightline.vim'
     " plugin from http://vim-scripts.org/vim/scripts.html
     Plugin 'L9'
     Plugin 'https://github.com/ctrlpvim/ctrlp.vim.git'
@@ -166,3 +167,5 @@ function CP_R()
     return '!clear;' . cp_r . ' '
 endfunction
 
+" hide mode bar because of duplication of Plugin'itchyny/lightline.vim'
+set noshowmode
