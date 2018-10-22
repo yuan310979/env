@@ -86,6 +86,7 @@ call vundle#begin()
     " plugin on GitHub repo
     Plugin 'tpope/vim-fugitive'
     Plugin 'itchyny/lightline.vim'
+    Plugin 'scrooloose/nerdtree'
     " plugin from http://vim-scripts.org/vim/scripts.html
     Plugin 'L9'
     Plugin 'https://github.com/ctrlpvim/ctrlp.vim.git'
@@ -125,6 +126,7 @@ map <F2> :set nu!<CR>
 " map <F2> :tabnew<CR>:AG 
 map <F3> :w<CR>:EXE 
 map <F4> :execute "vimgrep /" .expand("<cword>") . "/j **" <Bar> cw<CR>
+map <C-o> :NERDTreeToggle<CR> 
 command -nargs=* EXE execute CP_R() . <q-args>
 " command -nargs=* AG vimgrep <q-args> * | copen
 
