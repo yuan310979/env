@@ -14,15 +14,18 @@ set t_Co=256
 set expandtab
 set splitbelow
 
+" eliminate delays on ESC in vim
+" (timeout is used for mapping key delay)
+" (ttimeout is used for key code delay)
+set timeoutlen=1000 ttimeoutlen=10
+
 " c++ syntax checking
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 let g:syntastic_cpp_compiler = 'clang++'
 let g:syntastic_cpp_compiler_options = ' -std=c++11 '
-
 let g:syntastic_python_checkers = ['python3']
-
 
 " emmet
 let g:user_emmet_expandabbr_key = '<C-e>'

@@ -112,3 +112,6 @@ export PATH="/home/yuan310979/anaconda3/bin:$PATH"
 export PATH="/home/yuan310979/anaconda3/bin:$PATH"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# 10ms for key sequences
+KEYTIMEOUT=1
