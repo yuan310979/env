@@ -12,6 +12,7 @@ set hls
 set cin
 set t_Co=256
 set expandtab
+set splitbelow
 
 " c++ syntax checking
 set statusline+=%#warningmsg#
@@ -31,6 +32,20 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:lightline = {'colorscheme': 'wombat'}
+
+" ALE setting
+" icons column always on
+let g:ale_sign_column_always = 1
+let g:ale_set_highlights = 0
+" show linter name, error or warning
+let g:ale_echo_msg_error_str = 'E'
+let g:ale_echo_msg_warning_str = 'W'
+let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
+" sp to previous error/warning; sn to next
+nmap ep <Plug>(ale_previous_wrap)
+nmap en <Plug>(ale_next_wrap)
+nmap et :ALEToggle<CR>
+nmap ed :ALEDetail<CR>
 
 set fileencodings=utf8,big5,gbk,latin1
 map <C-u> :set fileencoding=utf8<CR>
@@ -83,6 +98,9 @@ call vundle#begin()
     Plugin 'tpope/vim-fugitive'
     Plugin 'itchyny/lightline.vim'
     Plugin 'scrooloose/nerdtree'
+    Plugin 'terryma/vim-multiple-cursors'
+    Plugin 'tpope/vim-surround'
+    Plugin 'w0rp/ale'
     " plugin from http://vim-scripts.org/vim/scripts.html
     Plugin 'L9'
     Plugin 'https://github.com/honza/vim-snippets'
