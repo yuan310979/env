@@ -12,6 +12,8 @@ set hls
 set cin
 set t_Co=256
 set expandtab
+set number 
+set relativenumber
 
 " c++ syntax checking
 set statusline+=%#warningmsg#
@@ -116,7 +118,7 @@ filetype plugin indent on        " required
 
 :set switchbuf+=newtab
 
-map e :Tex<CR>
+" map e :Tex<CR>
 map <F8> :set hls!<BAR>set hls?<CR>
 map <F11> gT
 map <F12> gt
