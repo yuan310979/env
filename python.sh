@@ -24,4 +24,4 @@ cd $HOME
 
 # install geopandas
 conda update --all
-conda install -c conda-forge fiona shapely geopandas
+conda install -c conda-forge ncurses fiona shapely geopandas
