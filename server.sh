@@ -48,9 +48,10 @@ rm $HOME/.tmux.conf
 ln -s $DIR/.tmux.conf ~/.tmux.conf
 tmux source ~/.tmux.conf
 
+# java 
+sudo apt-get install default-jdk
+
 # create wsl-terminal to desktop
 read -p "What is your windows username?" WINUSER
 cp -R ./wsl-terminal/ /mnt/d/
-
-# java 
-sudo apt-get install default-jdk
+echo -E "MKLINK c:\Users\$WINUSER\Desktop\Terminal d:\wsl-terminal\open-wsl.exe" | cmd.exe
