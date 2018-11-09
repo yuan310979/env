@@ -58,3 +58,4 @@ sudo apt-get install npm
 # create wsl-terminal to desktop
 read -p "What is your windows username?" WINUSER
 cp -R ./wsl-terminal/ /mnt/d/
+echo -E "MKLINK c:\Users\$WINUSER\Desktop\Terminal d:\wsl-terminal\open-wsl.exe" | cmd.exe
