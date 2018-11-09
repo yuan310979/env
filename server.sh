@@ -5,7 +5,7 @@ URL="https://raw.githubusercontent.com/yuan310979/env/master/config"
 mkdir -p $DIR
 
 sudo apt-get update
-sudo apt-get install -y zsh vim tmux screen curl git htop p7zip-full cmake
+sudo apt-get install -y zsh vim tmux screen curl git htop p7zip-full cmake grip
 
 # git
 rm -f $HOME/.gitconfig
