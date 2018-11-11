@@ -1,6 +1,7 @@
 export TERM="xterm-256color"
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
+export DISPLAY=127.0.0.1:0
 #export FZF_DEFAULT_COMMAND='ag --hidden --ignore .git -g ""'
 
 # Set name of the theme to load.
@@ -104,9 +105,6 @@ export LESS_TERMCAP_se=$'\E[0m'          # reset reverse video
 export LESS_TERMCAP_us=$'\E[1;32m'      # begin underline
 export LESS_TERMCAP_ue=$'\E[0m'         # reset underline
 export GROFF_NO_SGR=1                   # for konsole and gnome-terminal
-
-# added by Anaconda3 installer
-export PATH="/home/yuan310979/anaconda3/bin:$PATH"
 
 # added by Anaconda3 installer
 export PATH="/home/yuan310979/anaconda3/bin:$PATH"
