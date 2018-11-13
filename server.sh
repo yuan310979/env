@@ -12,6 +12,7 @@ wget -nv https://nchc.dl.sourceforge.net/project/vcxsrv/vcxsrv/1.20.1.3/vcxsrv-6
 mv ./vcxsrv-64.1.20.1.3.installer.exe /mnt/d/
 bash -c 'echo -E "d:\vcxsrv-64.1.20.1.3.installer.exe"' | cmd.exe
 rm /mnt/d/vcxsrv-64.1.20.1.3.installer.exe
+export DISPLAY=127.0.0.1:0
 
 # x-www-server configuration
 sudo update-alternatives --install /usr/bin/x-www-browser x-www-browser /mnt/c/Program\ Files\ \(x86\)/Google/Chrome/Application/chrome.exe 100
