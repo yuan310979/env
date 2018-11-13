@@ -1,4 +1,4 @@
-#/bin/sh
+#/bin/bash
 DIR="$PWD/config"
 FONT="$PWD/font"
 URL="https://raw.githubusercontent.com/yuan310979/env/master/config"
@@ -6,6 +6,16 @@ mkdir -p $DIR
 
 sudo apt-get update
 sudo apt-get install -y zsh vim tmux screen curl git htop p7zip-full cmake grip
+
+# install x-server
+wget -nv https://nchc.dl.sourceforge.net/project/vcxsrv/vcxsrv/1.20.1.3/vcxsrv-64.1.20.1.3.installer.exe
+mv ./vcxsrv-64.1.20.1.3.installer.exe /mnt/d/
+bash -c 'echo -E "d:\vcxsrv-64.1.20.1.3.installer.exe"' | cmd.exe
+rm /mnt/d/vcxsrv-64.1.20.1.3.installer.exe
+
+# x-www-server configuration
+sudo update-alternatives --install /usr/bin/x-www-browser x-www-browser /mnt/c/Program\ Files\ \(x86\)/Google/Chrome/Application/chrome.exe 100
+sudo update-alternatives --config x-www-browser
 
 # git
 rm -f $HOME/.gitconfig
@@ -58,4 +68,4 @@ sudo apt-get install npm
 # create wsl-terminal to desktop
 read -p "What is your windows username?" WINUSER
 cp -R ./wsl-terminal/ /mnt/d/
-echo -E "MKLINK c:\Users\$WINUSER\Desktop\Terminal d:\wsl-terminal\open-wsl.exe" | cmd.exe
+bash -c 'echo -E "MKLINK c:\Users\$WINUSER\Desktop\Terminal d:\wsl-terminal\open-wsl.exe"' | cmd.exe
