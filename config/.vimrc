@@ -38,6 +38,9 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:lightline = {'colorscheme': 'wombat'}
 
+" nerdcommenter
+let g:NERDSpaceDelims=1
+
 " ALE setting
 " icons column always on
 let g:ale_sign_column_always = 1
@@ -118,6 +121,7 @@ call vundle#begin()
     Plugin 'https://github.com/rking/ag.vim'
     " Plugin 'https://github.com/vim-syntastic/syntastic.git'
     Plugin 'http://github.com/mattn/emmet-vim/'
+    Plugin 'scrooloose/nerdcommenter'
     
     set rtp+=~/.fzf
     Plugin 'junegunn/fzf.vim'
