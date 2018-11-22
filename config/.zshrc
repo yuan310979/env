@@ -1,100 +1,41 @@
-export TERM="xterm-256color"
-# Path to your oh-my-zsh installation.
-export ZSH=$HOME/.oh-my-zsh
-#export FZF_DEFAULT_COMMAND='ag --hidden --ignore .git -g ""'
-
-# Set name of the theme to load.
-# Look in ~/.oh-my-zsh/themes/
-# Optionally, if you set this to "random", it'll load a random theme each
-# time that oh-my-zsh is loaded.
-# ZSH_THEME="xiong-chiamiov-plus"
+###########################################################################
+# basic configuration 
+###########################################################################
+export ZSH=$HOME/.oh-my-zsh         # Path to your oh-my-zsh installation.
+export TERM="xterm-256color"        # terminal color setting
+export DISPLAY=127.0.0.1:0          # set display port 
+export PATH="$PATH:$HOME/.rvm/bin"  # add RVM to PATH for scripting  
+export PATH="/home/$USER/anaconda3/bin:$PATH"
 ZSH_THEME="powerlevel9k/powerlevel9k"
+KEYTIMEOUT=1                        # 10ms for key sequences, which reduce the execution time from insert mode to normal mode
 
+###########################################################################
+# powerlevel9k setting
+###########################################################################
+# base setting on prompt line
 POWERLEVEL9K_MODE='nerdfont-complete'
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(dir dir_writable vcs)
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status time)
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(host dir dir_writable vcs anaconda)
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status background_jobs time)
+# anaconda
+POWERLEVEL9K_ANACONDA_RIGHT_DELIMITER='>'
+POWERLEVEL9K_ANACONDA_LEFT_DELIMITER='<'
+POWERLEVEL9K_ANACONDA_BACKGROUND='24'
+POWERLEVEL9K_ANACONDA_FOREGROUND='111'
 
-# Uncomment the following line to use case-sensitive completion.
-# CASE_SENSITIVE="true"
-
-# Uncomment the following line to use hyphen-insensitive completion. Case
-# sensitive completion must be off. _ and - will be interchangeable.
-# HYPHEN_INSENSITIVE="true"
-
-# Uncomment the following line to disable bi-weekly auto-update checks.
-# DISABLE_AUTO_UPDATE="true"
-
-# Uncomment the following line to change how often to auto-update (in days).
-# export UPDATE_ZSH_DAYS=13
-
-# Uncomment the following line to disable colors in ls.
-# DISABLE_LS_COLORS="true"
-
-# Uncomment the following line to disable auto-setting terminal title.
-# DISABLE_AUTO_TITLE="true"
-
-# Uncomment the following line to enable command auto-correction.
-# ENABLE_CORRECTION="true"
-
-# Uncomment the following line to display red dots whilst waiting for completion.
-# COMPLETION_WAITING_DOTS="true"
-
-# Uncomment the following line if you want to disable marking untracked files
-# under VCS as dirty. This makes repository status check for large repositories
-# much, much faster.
-# DISABLE_UNTRACKED_FILES_DIRTY="true"
-
-# Uncomment the following line if you want to change the command execution time
-# stamp shown in the history command output.
-# The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
-# HIST_STAMPS="mm/dd/yyyy"
-
-# Would you like to use another custom folder than $ZSH/custom?
-# ZSH_CUSTOM=/path/to/new-custom-folder
-
-# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
-# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
-# Example format: plugins=(rails git textmate ruby lighthouse)
-# Add wisely, as too many plugins slow down shell startup.
+###########################################################################
+# plugins 
+###########################################################################
 plugins=(git zsh-syntax-highlighting zsh-autosuggestions)
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-# User configuration
-
-# export PATH="/usr/bin:/bin:/usr/sbin:/sbin:$PATH"
-# export MANPATH="/usr/local/man:$MANPATH"
-
-source $ZSH/oh-my-zsh.sh
-
-# You may need to manually set your language environment
-# export LANG=en_US.UTF-8
-
-# Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
-
-# Compilation flags
-# export ARCHFLAGS="-arch x86_64"
-
-# ssh
-# export SSH_KEY_PATH="~/.ssh/dsa_id"
-
-# Set personal aliases, overriding those provided by oh-my-zsh libs,
-# plugins, and themes. Aliases can be placed here, though oh-my-zsh
-# users are encouraged to define aliases within the ZSH_CUSTOM folder.
-# For a full list of active aliases, run `alias`.
-#
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
-
+###########################################################################
+# alias 
+###########################################################################
 alias gdrive="/mnt/d/gdrive"
 
-export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
-
-# LESS setting (for 'man')
+###########################################################################
+# 'man' settings
+###########################################################################
 export LESS='--ignore-case --status-column --LONG-PROMPT --RAW-CONTROL-CHARS --HILITE-UNREAD --tabs=4 --window=4'
 export LESS_TERMCAP_mb=$'\E[1;31m'      # begin bold
 export LESS_TERMCAP_md=$'\E[1;36m'      # begin blink
@@ -105,13 +46,4 @@ export LESS_TERMCAP_us=$'\E[1;32m'      # begin underline
 export LESS_TERMCAP_ue=$'\E[0m'         # reset underline
 export GROFF_NO_SGR=1                   # for konsole and gnome-terminal
 
-# added by Anaconda3 installer
-export PATH="/home/yuan310979/anaconda3/bin:$PATH"
-
-# added by Anaconda3 installer
-export PATH="/home/yuan310979/anaconda3/bin:$PATH"
-
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
-# 10ms for key sequences
-KEYTIMEOUT=1
+source $ZSH/oh-my-zsh.sh
