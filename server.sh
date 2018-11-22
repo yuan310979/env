@@ -1,4 +1,3 @@
-#/bin/sh
 DIR="$PWD/config"
 FONT="$PWD/font"
 URL="https://raw.githubusercontent.com/yuan310979/env/master/config"
@@ -57,5 +56,5 @@ sudo apt-get install npm
 
 # create wsl-terminal to desktop
 read -p "What is your windows username?" WINUSER
-cp -R ./wsl-terminal/ /mnt/d/
-echo -E "MKLINK c:\Users\$WINUSER\Desktop\Terminal d:\wsl-terminal\open-wsl.exe" | cmd.exe
+cp -R ./wsl-terminal/ /mnt/c/
+echo "MKLINK c:\\Users\\$WINUSER\\Desktop\\Terminal c:\\wsl-terminal\\open-wsl.exe" | cmd.exe
