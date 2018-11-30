@@ -1,4 +1,61 @@
-colorscheme peachpuff
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Maintainer: 
+"       Peter Lee
+" Section:
+"       -> General
+"       -> Vim User Interface
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" General
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Enable filetype plugins
+filetype plugin on
+filetype indent on
+
+" Set to auto read when a file is changed from the outside
+set autoread
+
+" With a map leader it's possible to do extra key combinations
+" like <leader>w saves the current file
+let mapleader = ","
+
+" Fast saving
+nmap <leader>w :w!<CR>
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Vim User Interface
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Set 7 lines to the cursor - when moving vertically using j/k
+set so=7
+
+" Turn on the Wild menu
+set wildmenu
+" Set the first matching behavior to longest:full(longest match & turn on wildmenu)
+" the second matching behavior 
+set wildmode=longest:full,full
+" Ignore compiled files
+set wildignore=*.o,*~,*.pyc
+
+" Ignore case when searching
+set ignorecase
+
+" When searching try to be smart about cases
+set smartcase
+
+" Highlight search results
+set hlsearch
+
+" Makes search act like search in modern browsers
+set incsearch
+
+augroup vimrc-incsearch-highlight
+    autocmd!
+    autocmd CmdlineEnter /,\? :set hlsearch
+    autocmd CmdlineLeave /,\? :set nohlsearch
+augroup END
+
+colorscheme peachpuff 
 syntax on
 set bs=2
 set ts=4
@@ -8,7 +65,6 @@ set nu
 set ru
 set ai
 set is
-set hls
 set cin
 set t_Co=256
 set expandtab
@@ -61,7 +117,7 @@ map <C-g> :set fileencoding=big5<CR>
 "hi CursorLine ctermbg=8
 "hi Visual ctermbg=0
 
-set laststatus=2
+set saststatus=2
 set statusline=%5*%{hostname()}:%<%{CurDir()}/
 set statusline+=\ %2*%f%m
 set statusline+=\ %1*\[%{&fenc}:%Y]    
@@ -91,38 +147,38 @@ let g:ycm_key_list_previous_completion=[]
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
-    " alternatively, pass a path where Vundle should install plugins
-    "call vundle#begin('~/some/path/here')
+" alternatively, pass a path where Vundle should install plugins
+"call vundle#begin('~/some/path/here')
 
-    " let Vundle manage Vundle, required
-    Plugin 'VundleVim/Vundle.vim'
+" let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
 
-    " The following are examples of different formats supported.
-    " Keep Plugin commands between vundle#begin/end.
-    " plugin on GitHub repo
-    Plugin 'tpope/vim-fugitive'
-    Plugin 'itchyny/lightline.vim'
-    Plugin 'scrooloose/nerdtree'
-    Plugin 'terryma/vim-multiple-cursors'
-    Plugin 'tpope/vim-surround'
-    Plugin 'w0rp/ale'
-    " plugin from http://vim-scripts.org/vim/scripts.html
-    Plugin 'L9'
-    Plugin 'https://github.com/honza/vim-snippets'
-    Plugin 'https://github.com/othree/vim-autocomplpop'
-    Plugin 'https://github.com/marcweber/vim-addon-mw-utils'
-    Plugin 'https://github.com/tomtom/tlib_vim'
-    Plugin 'https://github.com/garbas/vim-snipmate'
-    Plugin 'Raimondi/delimitMate'
-    Plugin 'airblade/vim-gitgutter'
-    Plugin 'https://github.com/rking/ag.vim'
-    " Plugin 'https://github.com/vim-syntastic/syntastic.git'
-    Plugin 'http://github.com/mattn/emmet-vim/'
-    
-    set rtp+=~/.fzf
-    Plugin 'junegunn/fzf.vim'
+" The following are examples of different formats supported.
+" Keep Plugin commands between vundle#begin/end.
+" plugin on GitHub repo
+Plugin 'tpope/vim-fugitive'
+Plugin 'itchyny/lightline.vim'
+Plugin 'scrooloose/nerdtree'
+Plugin 'terryma/vim-multiple-cursors'
+Plugin 'tpope/vim-surround'
+Plugin 'w0rp/ale'
+" plugin from http://vim-scripts.org/vim/scripts.html
+Plugin 'L9'
+Plugin 'https://github.com/honza/vim-snippets'
+Plugin 'https://github.com/othree/vim-autocomplpop'
+Plugin 'https://github.com/marcweber/vim-addon-mw-utils'
+Plugin 'https://github.com/tomtom/tlib_vim'
+Plugin 'https://github.com/garbas/vim-snipmate'
+Plugin 'Raimondi/delimitMate'
+Plugin 'airblade/vim-gitgutter'
+Plugin 'https://github.com/rking/ag.vim'
+" Plugin 'https://github.com/vim-syntastic/syntastic.git'
+Plugin 'http://github.com/mattn/emmet-vim/'
 
-    " All of your Plugins must be added before the following line
+set rtp+=~/.fzf
+Plugin 'junegunn/fzf.vim'
+
+" All of your Plugins must be added before the following line
 call vundle#end()                        " required
 filetype plugin indent on        " required
 " To ignore plugin indent changes, instead use:
@@ -143,7 +199,7 @@ filetype plugin indent on        " required
 map <F8> :set hls!<BAR>set hls?<CR>
 map <F11> gT
 map <F12> gt
-map <F2> :set nu!<CR>
+map <F2> :set nu!<CR>:set relativenumber!<CR>
 " map <F2> :tabnew<CR>:AG 
 map <F3> :w<CR>:EXE 
 map <F4> :execute "vimgrep /" .expand("<cword>") . "/j **" <Bar> cw<CR>
