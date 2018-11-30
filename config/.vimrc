@@ -94,6 +94,9 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:lightline = {'colorscheme': 'wombat'}
 
+" nerdcommenter
+let g:NERDSpaceDelims=1
+
 " ALE setting
 " icons column always on
 let g:ale_sign_column_always = 1
@@ -147,38 +150,39 @@ let g:ycm_key_list_previous_completion=[]
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
-" alternatively, pass a path where Vundle should install plugins
-"call vundle#begin('~/some/path/here')
+    " alternatively, pass a path where Vundle should install plugins
+    "call vundle#begin('~/some/path/here')
 
-" let Vundle manage Vundle, required
-Plugin 'VundleVim/Vundle.vim'
+    " let Vundle manage Vundle, required
+    Plugin 'VundleVim/Vundle.vim'
 
-" The following are examples of different formats supported.
-" Keep Plugin commands between vundle#begin/end.
-" plugin on GitHub repo
-Plugin 'tpope/vim-fugitive'
-Plugin 'itchyny/lightline.vim'
-Plugin 'scrooloose/nerdtree'
-Plugin 'terryma/vim-multiple-cursors'
-Plugin 'tpope/vim-surround'
-Plugin 'w0rp/ale'
-" plugin from http://vim-scripts.org/vim/scripts.html
-Plugin 'L9'
-Plugin 'https://github.com/honza/vim-snippets'
-Plugin 'https://github.com/othree/vim-autocomplpop'
-Plugin 'https://github.com/marcweber/vim-addon-mw-utils'
-Plugin 'https://github.com/tomtom/tlib_vim'
-Plugin 'https://github.com/garbas/vim-snipmate'
-Plugin 'Raimondi/delimitMate'
-Plugin 'airblade/vim-gitgutter'
-Plugin 'https://github.com/rking/ag.vim'
-" Plugin 'https://github.com/vim-syntastic/syntastic.git'
-Plugin 'http://github.com/mattn/emmet-vim/'
+    " The following are examples of different formats supported.
+    " Keep Plugin commands between vundle#begin/end.
+    " plugin on GitHub repo
+    Plugin 'tpope/vim-fugitive'
+    Plugin 'itchyny/lightline.vim'
+    Plugin 'scrooloose/nerdtree'
+    Plugin 'terryma/vim-multiple-cursors'
+    Plugin 'tpope/vim-surround'
+    Plugin 'w0rp/ale'
+    " plugin from http://vim-scripts.org/vim/scripts.html
+    Plugin 'L9'
+    Plugin 'https://github.com/honza/vim-snippets'
+    Plugin 'https://github.com/othree/vim-autocomplpop'
+    Plugin 'https://github.com/marcweber/vim-addon-mw-utils'
+    Plugin 'https://github.com/tomtom/tlib_vim'
+    Plugin 'https://github.com/garbas/vim-snipmate'
+    Plugin 'Raimondi/delimitMate'
+    Plugin 'airblade/vim-gitgutter'
+    Plugin 'https://github.com/rking/ag.vim'
+    " Plugin 'https://github.com/vim-syntastic/syntastic.git'
+    Plugin 'http://github.com/mattn/emmet-vim/'
+    Plugin 'scrooloose/nerdcommenter'
+    
+    set rtp+=~/.fzf
+    Plugin 'junegunn/fzf.vim'
 
-set rtp+=~/.fzf
-Plugin 'junegunn/fzf.vim'
-
-" All of your Plugins must be added before the following line
+    " All of your Plugins must be added before the following line
 call vundle#end()                        " required
 filetype plugin indent on        " required
 " To ignore plugin indent changes, instead use:
