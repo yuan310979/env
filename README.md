@@ -1,5 +1,5 @@
 WSL(Windows Subsystem for Linux) Environment Installer
 ===
-it is a setup installer of my wsl configuration, which can setup your bash entirely.
+it is a auto-setup of my wsl configuration.
 
 ![IMG](https://imgur.com/qf7yNNn.png)
