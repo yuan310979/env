@@ -5,6 +5,8 @@ export ZSH=$HOME/.oh-my-zsh         # Path to your oh-my-zsh installation.
 export TERM="xterm-256color"        # terminal color setting
 export DISPLAY=127.0.0.1:0          # set display port 
 export PATH="$PATH:$HOME/.rvm/bin"  # add RVM to PATH for scripting  
+export PATH="$HOME/.rbenv/bin:$PATH"
+export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"
 export PATH="/home/$USER/anaconda3/bin:$PATH"
 ZSH_THEME="powerlevel9k/powerlevel9k"
 KEYTIMEOUT=1                        # 10ms for key sequences, which reduce the execution time from insert mode to normal mode
@@ -47,3 +49,4 @@ export LESS_TERMCAP_ue=$'\E[0m'         # reset underline
 export GROFF_NO_SGR=1                   # for konsole and gnome-terminal
 
 source $ZSH/oh-my-zsh.sh
+source $HOME/.zshenv

@@ -41,6 +41,7 @@ cp $FONT/Powerline.ttf /usr/local/share/fonts/
 cp oh-my-zsh/oh-my-zsh.sh ../.oh-my-zsh/
 rm ~/.zshrc
 ln -s $DIR/.zshrc ~/.zshrc
+ln -s $DIR/.zshenv ~/.zshenv
 source $HOME/.zshrc
 git clone git://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
