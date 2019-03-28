@@ -2,7 +2,8 @@ sudo apt-get update
 sudo apt-get upgrade
 
 # install Anaconda3
-fileName=`curl -sS https://www.anaconda.com/download/\#linux | grep -Po 'Anaconda3(.*?)x86_64\.sh' | sed -n '2p'`
+fileName=`curl -sS https://www.anaconda.com/distribution/#download | grep -Po 'Anaconda3(.*?)x86_64\.sh' | sed -n '2p'`
+echo $fileName
 curl -fsSL https://repo.anaconda.com/archive/$fileName > anaconda.sh
 bash ./anaconda.sh
 rm ./anaconda.sh
