@@ -1,11 +1,24 @@
+#!/bin/bash
 sudo apt-get update
 sudo apt-get upgrade
 
-# install Anaconda3
-fileName=`curl -sS https://www.anaconda.com/download/\#linux | grep -Po 'Anaconda3(.*?)x86_64\.sh' | sed -n '2p'`
-curl -fsSL https://repo.anaconda.com/archive/$fileName > anaconda.sh
-bash ./anaconda.sh
-rm ./anaconda.sh
+while true; do
+    read -p "Do you want to install Anaconda3? (Y/N)" yn
+    case $yn in
+        [Yy])
+            # install Anaconda3
+            fileName=`curl -sS https://www.anaconda.com/download/\#linux | grep -Po 'Anaconda3(.*?)x86_64\.sh' | sed -n '2p'`
+            curl -fsSL https://repo.anaconda.com/archive/$fileName > anaconda.sh
+            bash ./anaconda.sh
+            rm ./anaconda.sh
+            ;;
+        [Nn])
+            exit
+            ;;
+        *)
+            echo "Please answer Y or N."
+    esac
+done
 
 # install opencv
 sudo apt-get install build-essential cmake pkg-config libjpeg8-dev libtiff5-dev libjasper-dev libpng12-dev libavcodec-dev libavformat-dev libswscale-dev libv4l-dev libxvidcore-dev libx264-dev
