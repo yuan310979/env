@@ -160,6 +160,9 @@ map <C-k> <C-W>k
 map <C-h> <C-W>h
 map <C-l> <C-W>l
 
+" Split window mapping
+map <leader>sb :sb 
+
 " Close the current buffer
 map <leader>bd :bd<cr>
 
@@ -276,6 +279,10 @@ nmap en <Plug>(ale_next_wrap)
 nmap et :ALEToggle<CR>
 nmap ed :ALEDetail<CR>
 
+" jedi-vim
+let g:jedi#popup_on_dot = 0
+let g:jedi#completions_command = "<TAB>"
+
 function! CurDir()
     " let curdir = substitute(getcwd(), $HOME, "~", "")
     let prefix = " ../"
@@ -320,6 +327,7 @@ call vundle#begin()
     Plugin 'https://github.com/rking/ag.vim'
     Plugin 'http://github.com/mattn/emmet-vim/'
     Plugin 'scrooloose/nerdcommenter'
+    Plugin 'davidhalter/jedi-vim'
     
     set rtp+=~/.fzf
     Plugin 'junegunn/fzf.vim'
@@ -371,4 +379,3 @@ function CP_R()
     endif
     return '!clear;' . cp_r . ' '
 endfunction
-
