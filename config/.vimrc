@@ -170,7 +170,7 @@ map <leader>ba :bufdo bd<cr>
 
 " Move next or previous from and to buffer
 map <leader>l :bnext<cr>
-map <leader>h :bprevious<cr
+map <leader>h :bprevious<cr>
 
 " Useful mappings for managing tabs
 map <leader>tn :tabnew<cr>
