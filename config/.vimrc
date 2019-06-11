@@ -58,11 +58,11 @@ set hlsearch
 set incsearch
 
 " Highlight only in command prompt
-augroup vimrc-incsearch-highlight
-    autocmd!
-    autocmd CmdlineEnter /,\? :set hlsearch
-    autocmd CmdlineLeave /,\? :set nohlsearch
-augroup END
+" augroup vimrc-incsearch-highlight
+    " autocmd!
+    " autocmd CmdlineEnter /,\? :set hlsearch
+    " autocmd CmdlineLeave /,\? :set nohlsearch
+" augroup END
 
 " Don't redraw while executing macros (good performance config)
 set lazyredraw
@@ -148,8 +148,7 @@ vnoremap <silent> # :<C-u>call VisualSelection('', '')<CR>?<C-R>=@/<CR><CR>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Moving around, tabs, windows and buffers
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Map <Space> to / (search) and ,-<Space> to ? (backwards search)
-map <space> /
+" Map <leader><Space> to ? (backwards search)
 map <leader><space> ?
 
 set splitbelow
