@@ -249,6 +249,8 @@ map <F8> :set hls!<BAR>set hls?<CR>
 
 map <F4> :execute "vimgrep /" .expand("<cword>") . "/j **" <Bar> cw<CR>
 command -nargs=* EXE execute CP_R() . <q-args>
+map f :Ag! <cword><CR>
+map <c-f> :Ag! 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Plugin & Extension 
