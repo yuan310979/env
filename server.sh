@@ -36,7 +36,7 @@ ln -s $DIR/.bashrc $HOME/.bashrc
 sudo chsh -s /bin/zsh $USER
 git clone https://github.com/robbyrussell/oh-my-zsh.git
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/themes/powerlevel9k
+git clone https://github.com/romkatv/powerlevel10k.git $ZSH_CUSTOM/themes/powerlevel10k
 cp $FONT/Powerline.ttf /usr/local/share/fonts/
 cp oh-my-zsh/oh-my-zsh.sh ../.oh-my-zsh/
 rm ~/.zshrc

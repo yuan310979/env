@@ -8,7 +8,7 @@ export PATH="$PATH:$HOME/.rvm/bin"  # add RVM to PATH for scripting
 export PATH="$HOME/.rbenv/bin:$PATH"
 export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"
 export PATH="/home/$USER/anaconda3/bin:$PATH"
-ZSH_THEME="powerlevel9k/powerlevel9k"
+ZSH_THEME="powerlevel10k/powerlevel10k"
 KEYTIMEOUT=1                        # 10ms for key sequences, which reduce the execution time from insert mode to normal mode
 
 ###########################################################################
@@ -50,3 +50,4 @@ export GROFF_NO_SGR=1                   # for konsole and gnome-terminal
 
 source $ZSH/oh-my-zsh.sh
 source $HOME/.zshenv
+source ~/.rvm/scripts/rvm
