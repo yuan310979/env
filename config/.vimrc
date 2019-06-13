@@ -249,8 +249,6 @@ map <F8> :set hls!<BAR>set hls?<CR>
 
 map <F4> :execute "vimgrep /" .expand("<cword>") . "/j **" <Bar> cw<CR>
 command -nargs=* EXE execute CP_R() . <q-args>
-map f :Ag! <cword><CR>
-map <c-f> :Ag! 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Plugin & Extension 
@@ -283,6 +281,13 @@ nmap ed :ALEDetail<CR>
 " jedi-vim
 let g:jedi#popup_on_dot = 0
 let g:jedi#completions_command = "<TAB>"
+
+" Ag
+map f :Ag! <cword><CR>
+map <c-f> :Ag! 
+
+" Fugitive
+nmap gc :Gcommit %<CR>
 
 function! CurDir()
     " let curdir = substitute(getcwd(), $HOME, "~", "")
