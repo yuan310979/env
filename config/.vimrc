@@ -280,7 +280,7 @@ nmap ed :ALEDetail<CR>
 
 " jedi-vim
 let g:jedi#popup_on_dot = 0
-let g:jedi#completions_command = "<TAB>"
+let g:jedi#completions_command = "<c+TAB>"
 
 " Ag
 map f :Ag! <cword><CR>
