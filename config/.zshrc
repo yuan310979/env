@@ -7,8 +7,9 @@ export DISPLAY=127.0.0.1:0          # set display port
 export PATH="$PATH:$HOME/.rvm/bin"  # add RVM to PATH for scripting  
 export PATH="$HOME/.rbenv/bin:$PATH"
 export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"
-export PATH="/home/$USER/anaconda3/bin:$PATH"
-ZSH_THEME="powerlevel10k/powerlevel10k"
+export PATH="$HOME/miniconda3/bin:$PATH"
+export PATH="$HOME/.local/bin:$PATH"
+ZSH_THEME="rkj-repos"
 KEYTIMEOUT=1                        # 10ms for key sequences, which reduce the execution time from insert mode to normal mode
 
 ###########################################################################
