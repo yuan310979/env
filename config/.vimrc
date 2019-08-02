@@ -282,6 +282,13 @@ nmap ed :ALEDetail<CR>
 let g:jedi#popup_on_dot = 0
 let g:jedi#completions_command = "<c+TAB>"
 
+" Ag
+map f :Ag! <cword><CR>
+map <c-f> :Ag! 
+
+" Fugitive
+nmap gc :Gcommit %<CR>
+
 function! CurDir()
     " let curdir = substitute(getcwd(), $HOME, "~", "")
     let prefix = " ../"
